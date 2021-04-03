@@ -1,0 +1,135 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: preprocessCompute
+  insize=6148 outsize=6147 ok=1
+Cmd: preprocessCompute
+  insize=6146 outsize=6145 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(157): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(166): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(167): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(181): implicit truncation of vector type
+  api=4 insize=6145 outsize=6964 ok=1
+Cmd: preprocessCompute
+  insize=6175 outsize=6174 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6174 outsize=6292 ok=1
+Cmd: preprocessCompute
+  insize=6171 outsize=6170 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6170 outsize=7932 ok=1
+Cmd: preprocessCompute
+  insize=6171 outsize=6170 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6170 outsize=7988 ok=1
+Cmd: preprocessCompute
+  insize=6282 outsize=6281 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(116): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at SlimeCompute.compute(161): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(170): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(171): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(185): implicit truncation of vector type
+  api=4 insize=6281 outsize=8164 ok=1
+Cmd: preprocessCompute
+  insize=6257 outsize=6256 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(116): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at SlimeCompute.compute(160): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(169): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(170): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(184): implicit truncation of vector type
+  api=4 insize=6256 outsize=7140 ok=1
+Cmd: preprocessCompute
+  insize=6267 outsize=6266 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(116): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at SlimeCompute.compute(161): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(170): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(171): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(185): implicit truncation of vector type
+  api=4 insize=6266 outsize=7140 ok=1
+Cmd: preprocessCompute
+  insize=6267 outsize=6266 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(116): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at SlimeCompute.compute(161): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(170): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(171): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(185): implicit truncation of vector type
+  api=4 insize=6266 outsize=7812 ok=1
+Cmd: preprocessCompute
+  insize=6156 outsize=6155 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6155 outsize=7636 ok=1
+Cmd: preprocessCompute
+  insize=6266 outsize=6265 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at SlimeCompute.compute(143): 'updateTrailPositions': no matching 2 parameter function
+  api=4 insize=6265 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=6256 outsize=6255 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at SlimeCompute.compute(143): 'updateTrailPositions': no matching 2 parameter function
+  api=4 insize=6255 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=6283 outsize=6282 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6282 outsize=7852 ok=1
+Cmd: preprocessCompute
+  insize=6761 outsize=6760 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at SlimeCompute.compute(153): 'updateTrailPositions': no matching 3 parameter function
+  api=4 insize=6760 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=6766 outsize=6765 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(168): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(177): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(178): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(192): implicit truncation of vector type
+  api=4 insize=6765 outsize=8740 ok=1
+Cmd: preprocessCompute
+  insize=6774 outsize=6773 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(168): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(177): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(178): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(192): implicit truncation of vector type
+  api=4 insize=6773 outsize=8740 ok=1
+Cmd: preprocessCompute
+  insize=6291 outsize=6290 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(158): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(167): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(168): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  api=4 insize=6290 outsize=7888 ok=1
+Cmd: preprocessCompute
+  insize=6308 outsize=6307 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(159): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(168): signed/unsigned mismatch, unsigned assumed
+  error: 1 plat 4 at SlimeCompute.compute(169): integer modulus may be much slower, try using uints if possible.
+  error: 1 plat 4 at SlimeCompute.compute(183): implicit truncation of vector type
+  api=4 insize=6307 outsize=7888 ok=1

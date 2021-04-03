@@ -1,0 +1,72 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct particle{
+    float2 position;
+    float2 velocity;
+    float t;
+};
+RWStructuredBuffer<particle> particles;
+RWStructuredBuffer<float> particleArray;
+int n;
+int i;
+float resolution;
+float targetx;
+float targety;
+float rand(float2 co) {
+    return frac(sin(dot(co.xy, float2(3.245968465, 78.233))) * 43758.5453);
+}
+float2 reflect(float2 n, float2 l) {
+    l = normalize(l);
+    return normalize((l)-2 * dot(l, n) * n);
+}
+
+[numthreads(128,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+
+    float i = id.x;
+
+    float t = particles[i].t;
+    float2 pos = particles[i].position;
+    float2 velocity = particles[i].velocity;
+    //DELETE OLD
+    int integerPosition = int(pos.x) + int(pos.y) * resolution;
+
+    //particleArray[integerPosition] = 0;
+    //particleArray[integerPosition + resolution] = 0;
+    //particleArray[integerPosition - resolution] = 0;
+    //particleArray[integerPosition + 1] = 0;
+    //particleArray[integerPosition - 1] = 0;
+
+    if (targetx != 0)
+        pos += normalize(float2(targetx, targety) - pos);//  *t;
+    else
+        pos += velocity * t;
+
+    //SET TO ONE AFTER
+    
+    int newIntegerPosition = int(pos.x) + int(pos.y) * resolution;
+
+    if (newIntegerPosition >= resolution * resolution) {
+        particles[i].velocity = reflect(float2(0, -1),  velocity);   
+    }
+    else if (newIntegerPosition <= 0) {
+        particles[i].velocity = reflect(float2(0, 1), velocity);
+    }
+    else if (newIntegerPosition % resolution >= resolution - 5) {
+        particles[i].velocity = reflect(normalize(float2(-1,0)), velocity);
+    }
+    else if (newIntegerPosition % resolution <= 5) {
+        particles[i].velocity = reflect(float2(1, 0),velocity);
+    }
+    particleArray[newIntegerPosition] = 1;
+    particleArray[newIntegerPosition + resolution] = .5;
+    particleArray[newIntegerPosition - resolution] = .5;
+    particleArray[newIntegerPosition + 1] = .5;
+    particleArray[newIntegerPosition - 1] = .5;
+    particles[i].position = pos;
+    particles[i].t = max(0, t - .0002);
+}

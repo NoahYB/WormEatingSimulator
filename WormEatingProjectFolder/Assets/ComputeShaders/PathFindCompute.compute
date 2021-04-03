@@ -1,0 +1,93 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct particle {
+    float2 position;
+    float2 velocity;
+    float t;
+};
+RWStructuredBuffer<particle> particles;
+RWStructuredBuffer<int> particleArray;
+
+int n;
+float resolution;
+float targetx;
+float targety;
+
+float rand(float2 co) {
+    return frac(sin(dot(co.xy, float2(3.245968465, 78.233))) * 43758.5453);
+}
+float2 reflect(float2 n, float2 l) {
+    l = normalize(l);
+    return normalize((l)-2 * dot(l, n) * n);
+}
+void setPosition(int position, int value, int size) {
+    particleArray[position] = value;
+    for (int i = 0; i < size; i++) {
+        particleArray[position + resolution * i] = value;
+        particleArray[position - resolution * i] = value;
+        particleArray[position + i] = value;
+        particleArray[position - i] = value;
+        particleArray[position - resolution * i + i] = value;
+        particleArray[position - resolution * i - i] = value;
+        particleArray[position + resolution * i + i] = value;
+        particleArray[position + resolution * i - i] = value;
+    }
+}
+void setTrailPosition(int position, int value, int size) {
+    particleArray[position] = value;
+    for (int i = 0; i < size; i++) {
+        particleArray[position + resolution * i] = value;
+        particleArray[position - resolution * i] = value;
+        particleArray[position + i] = 2;
+        particleArray[position - i] = 2;
+        particleArray[position - resolution * i + i] = value;
+        particleArray[position - resolution * i - i] = value;
+        particleArray[position + resolution * i + i] = value;
+        particleArray[position + resolution * i - i] = value;
+    }
+}
+float2 checkCollisions(int position, float2 velocity, particle part , float deaccelonhit) {
+    if (position >= resolution * resolution) {
+        part.velocity = reflect(float2(0, -1), velocity) * deaccelonhit;
+    }
+    else if (position <= 0) {
+        part.velocity = reflect(float2(0, 1), velocity) * deaccelonhit;
+    }
+    else if (position % resolution >= resolution - 5) {
+        part.velocity = reflect(normalize(float2(-1, 0)), velocity) * deaccelonhit;
+    }
+    else if (position % resolution <= 5) {
+        part.velocity = reflect(float2(1, 0), velocity) * deaccelonhit;
+    }
+    return part.velocity;
+}
+[numthreads(128, 1, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+
+    float i = id.x;
+
+    float t = particles[i].t;
+    float2 pos = particles[i].position;
+    float2 velocity = particles[i].velocity;
+
+    int integerPosition = int(pos.x) + int(pos.y) * resolution;
+    setTrailPosition(integerPosition, 2, 2);
+
+    if (targetx != 0)
+        pos += normalize(float2(targetx, targety) - pos);//  *t;
+    else
+        pos +=  velocity * t/100;
+
+    //SET TO ONE AFTER
+
+    int newIntegerPosition = int(pos.x) + int(pos.y) * resolution;
+    particles[i].velocity = checkCollisions(newIntegerPosition, velocity, particles[i], .788);
+    setPosition(newIntegerPosition, 1.0,2);
+
+    particles[i].position = pos;
+    particles[i].t = max(0, t - .000002);
+}
