@@ -8,7 +8,9 @@ RWTexture2D<float4> Result;
 float resolution;
 float n;
 float t = 1;
+float fade;
 RWStructuredBuffer<int> particleArray;
+RWStructuredBuffer<int> trailArray;
 
 
 float rand(float2 co) {
@@ -16,26 +18,50 @@ float rand(float2 co) {
 }
 
 
-[numthreads(64,1,1)]
+[numthreads(16,16,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
     float x = id.x / resolution;
     float y = id.y / resolution;
     int index = id.x + id.y * resolution;
     int type = particleArray[index];
-    if(type == 1)
+    if (id.x > resolution - 40 || id.x < 40 || id.y > resolution - 40 || id.y < 40)
+    {
+        Result[id.xy] = float4(1, 1, 1, 0.0);
+    }
+    else if (type == 1)
         Result[id.xy] = float4(type, 0.0, 0.0, 0.0);
-    else if (type >= 4) {
-        particleArray[index] += 1;
-        Result[id.xy] = float4(300 / float(type/2), 300 / float(type * 2), 0, 0);
+    else if (trailArray[index] > 1 && trailArray[index] < 4001) {
+        trailArray[index] -= fade;
+        Result[id.xy] = float4(float(trailArray[index]) / 4000, 0, 0, 0);
     }
-    else if (type == 2)
-        Result[id.xy] = float4(0.0, 1.0, 0.0, 0.0);
-    else if (type <0) {
-        particleArray[index] += 1;
-        Result[id.xy] = float4(0, 0, 0, 0);
+    else {
+        float sum = 0;
+        sum += trailArray[index];
+        sum += trailArray[index + 1];
+        sum += trailArray[index - 1];
+        sum += trailArray[index - resolution];
+        sum += trailArray[index + resolution];
+        sum += trailArray[index + resolution - 1];
+        sum += trailArray[index + resolution + 1];
+        sum += trailArray[index - resolution - 1];
+        sum += trailArray[index - resolution + 1];
+        sum += trailArray[index + 2];
+        sum += trailArray[index - 2];
+        sum += trailArray[index - resolution * 2];
+        sum += trailArray[index + resolution * 2];
+        sum += trailArray[index + resolution - 2];
+        sum += trailArray[index + resolution + 2];
+        sum += trailArray[index - resolution - 2];
+        sum += trailArray[index - resolution + 2];
+        sum += trailArray[index + resolution * 2 - 2];
+        sum += trailArray[index + resolution * 2 + 2];
+        sum += trailArray[index - resolution * 2 - 2];
+        sum += trailArray[index - resolution * 2 + 2];
+        
+        Result[id.xy] = float4(sum/18/4000, 0,0, 0.0);
+        trailArray[index] = sum/18;
     }
-    else
-        Result[id.xy] = float4(0.0, 0.0, 0.0, 0.0);
     t -= .001;
+    
 }

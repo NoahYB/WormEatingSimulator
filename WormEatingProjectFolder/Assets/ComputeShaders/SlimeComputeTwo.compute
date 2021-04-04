@@ -1,0 +1,180 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct particle {
+    float2 position;
+    float heading;
+};
+RWStructuredBuffer<int> trailPositions;
+RWStructuredBuffer<particle> particles;
+RWStructuredBuffer<int> particleArray;
+RWStructuredBuffer<int> trailArray;
+
+int n;
+float resolution;
+int size;
+int trailLength;
+int timeBeforeTurn;
+float noseStrength;
+float speed;
+
+//has max of 4294967295.0
+float hash(uint state) {
+    state ^= 2747636419u;
+    state *= 2654435769u;
+    state ^= state >> 16;
+    state *= 2654435769u;
+    state ^= state >> 16;
+    state *= 2654435769u;
+
+    return float(state) / 4294967295.0;
+}
+float2 reflect(float2 n, float2 l) {
+    l = normalize(l);
+    return normalize((l)-2 * dot(l, n) * n);
+}
+void setPosition(int position, int value, int size) {
+    size = size - 1;
+    particleArray[position] = value;
+    for (int i = 0; i < size-1; i++) {
+        particleArray[position + resolution * i] = value;
+        particleArray[position - resolution * i] = value;
+        particleArray[position + i] = value;
+        particleArray[position - i] = value;
+        particleArray[position - resolution * i + i] = value;
+        particleArray[position - resolution * i - i] = value;
+        particleArray[position + resolution * i + i] = value;
+        particleArray[position + resolution * i - i] = value;
+    }
+}
+void setTrailPosition(int position, int value, int size) {
+
+    value = particleArray[position] < 0 ? particleArray[position] : value;
+
+    particleArray[position] = value;
+    size = size - 1;
+    for (int i = 0; i < size; i++) {
+        particleArray[position + resolution * i] = value;
+        particleArray[position - resolution * i] = value;
+        particleArray[position + i] = value;
+        particleArray[position - i] = value;
+        particleArray[position - resolution * i + i] = value;
+        particleArray[position - resolution * i - i] = value;
+        particleArray[position + resolution * i + i] = value;
+        particleArray[position + resolution * i - i] = value;
+    }
+}
+float2 checkCollisions(float2 pos, float heading) {
+    if (pos.y < 50 || pos.y >= resolution - 50) {
+        return -heading;
+    }
+    if (pos.x < 50 || pos.x >= resolution - 50) {
+        return heading;
+    }
+    return heading;
+}
+float probe(float heading, float2 pos) {
+    float max = 0;
+    float winner = heading;
+    float2 directionForward = normalize(float2(cos(heading), sin(heading)));
+    float2 directionLeft = normalize(float2(cos(heading - 3.14/8), sin(heading - 3.14 /8)));
+    float2 directionRight = normalize(float2(cos(heading + 3.14/8), sin(heading + 3.14 /8)));
+    float2 forward = pos + directionForward;
+    float2 left = pos + directionLeft;
+    float2 right = pos + directionRight;
+
+    for (int i = 0; i < 20; i++) {
+        float f = trailArray[int(forward.x) + int(forward.y) * resolution];
+        
+        if (f > max) {
+            max = f;
+        }
+        forward = ((pos + directionForward * size * 4) + (directionForward * (1 + float(i)/10)) * size + 1);
+        //trailArray[int(forward.x) + int(forward.y) * resolution] = 3;
+    }
+    float l = trailArray[int(left.x) + int(left.y) * resolution];
+
+    for (int i = 0; i < 20; i++) {
+        float l = trailArray[int(left.x) + int(left.y) * resolution];
+
+        if (l > max) {
+            max = l;
+            winner = heading - 3.14 / 8;
+        }
+        left = ((pos + directionLeft * size * 4) + (directionLeft * (1 + float(i) / 10)) * size + 1);
+        //trailArray[int(left.x) + int(left.y) * resolution] = 3;
+    }
+    float r = trailArray[int(right.x) + int(right.y) * resolution];
+
+    for (int i = 0; i < 20; i++) {
+        float r = trailArray[int(right.x) + int(right.y) * resolution];
+
+        if (r > max) {
+            max = r;
+            winner = heading + 3.14 / 8;
+        }
+        right = ((pos + directionRight * size * 4) + (directionRight * (1 + float(i) / 10)) * size + 1);
+        //trailArray[int(right.x) + int(right.y) * resolution] = 3;
+    }
+    return winner;
+}
+float2 posFromIndex(int pos) {
+    return float2(resolution % (pos), float(pos) % resolution);
+}
+void makeTrail(int index, int size) {
+    for (int p = 0; p < size; p++) {
+        trailArray[index + resolution * p] = 4000;
+        trailArray[index - resolution * p] = 4000;
+        trailArray[index + p] = 4000;
+        trailArray[index - p] = 4000;
+        trailArray[index - resolution * p + p] = 4000;
+        trailArray[index - resolution * p - p] = 4000;
+        trailArray[index + resolution * p + p] = 4000;
+        trailArray[index + resolution * p - p] = 4000;
+    }
+}
+
+//FUNCTIONS TO HELP WITH CONDITIONALS
+//http://theorangeduck.com/page/avoiding-shader-conditionals
+float4 when_eq(float x, float y) {
+    return 1.0 - abs(sign(x - y));
+}
+
+[numthreads(64, 1, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    //get index of current particle
+    int i = id.x;
+    //get variables attatched to particle
+    float2 pos = particles[i].position;
+    float heading = checkCollisions(pos, particles[i].heading);
+    //get direction
+    float2 direction = normalize(float2(cos(heading), sin(heading)));
+    //get position in texture
+    int integerPosition = int(pos.x) + int(pos.y) * resolution;
+    //set old position to trail color
+    setTrailPosition(integerPosition, 0, size);
+    
+    //apply transformation
+    pos += direction * speed;
+    //get new position in texture
+    int newIntegerPosition = int(pos.x) + int(pos.y) * resolution;
+    //check for collisions
+    
+    //set new position in texture
+    setPosition(newIntegerPosition, 1.0, size);
+    //update heading
+
+    //float headingModifier = hash(pos.y * resolution + pos.x + hash(i));
+    //headingModifier = headingModifier < .5 ? headingModifier : headingModifier * -1;
+    heading = probe(heading, pos);
+
+    particles[i].heading = heading;
+
+    //update position time and heading of particle
+    particles[i].position = pos;
+    makeTrail(integerPosition, size);
+
+}

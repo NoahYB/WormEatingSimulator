@@ -149,21 +149,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1052029984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d775d517497a045a559e2b92374966, type: 3}
+  m_Script: {fileID: 11500000, guid: e66aafb9685d2384a92b4a0b130b050f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   computeTexture: {fileID: 7200000, guid: 9414b5c7921ac8e459399ee46e4a9427, type: 3}
-  computeParticle: {fileID: 7200000, guid: 2c3217bb542c8a2489493f94faf919d9, type: 3}
+  computeParticle: {fileID: 7200000, guid: 1be107bece014a140a20415f9230599d, type: 3}
   renderTexture: {fileID: 0}
-  resolution: 500
-  n: 10000
-  speed: 3
-  size: 2
-  sizeOfFood: 50
-  numberOfFood: 10
-  lengthOfFoodTrail: 1000
+  resolution: 2048
+  n: 1000000
+  speed: 0.1
+  size: 1
+  sizeOfFood: 0
+  numberOfFood: 0
+  lengthOfFoodTrail: 0
   timeBeforeTurn: 5
-  noseStrength: 0.0008
+  trailFade: 20
+  noseStrength: 10
 --- !u!81 &1052029986
 AudioListener:
   m_ObjectHideFlags: 0
