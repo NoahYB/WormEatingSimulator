@@ -1,2 +1,7 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(170): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(179): signed/unsigned mismatch, unsigned assumed
+  error: 2 plat 4 at SlimeCompute.compute(189): undeclared identifier 'headingModifier'
+  api=4 insize=6935 outsize=0 ok=0

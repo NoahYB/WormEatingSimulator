@@ -24,6 +24,8 @@ public class SlimeHandler : MonoBehaviour
 
     public int lengthOfFoodTrail;
 
+    public int timeBeforeTurn;
+
     ComputeBuffer particleBuffer;
 
     ComputeBuffer particleBoardBuffer;
@@ -72,6 +74,7 @@ public class SlimeHandler : MonoBehaviour
         computeParticle.SetInt("size", size);
         computeParticle.SetFloat("resolution", resolution);
         computeParticle.SetInt("trailLength", lengthOfFoodTrail);
+        computeParticle.SetInt("timeBeforeTurn", timeBeforeTurn);
 
 
         //pass buffer to shader
@@ -95,7 +98,7 @@ public class SlimeHandler : MonoBehaviour
     {
         //Create the particle buffer
         particleArray = CreateParticles();
-        int totalSize = sizeof(float) * 2 + sizeof(float) * 3 + sizeof(int) + sizeof(uint) + sizeof(uint);
+        int totalSize = sizeof(float) * 2 + sizeof(float) * 3 + sizeof(int) + sizeof(uint) *3;
         particleBuffer = new ComputeBuffer
             (particleArray.Length, totalSize);
         particleBuffer.SetData(particleArray);
