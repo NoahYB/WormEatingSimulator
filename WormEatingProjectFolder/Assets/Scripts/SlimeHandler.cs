@@ -26,6 +26,8 @@ public class SlimeHandler : MonoBehaviour
 
     public int timeBeforeTurn;
 
+    public float noseStrength;
+
     ComputeBuffer particleBuffer;
 
     ComputeBuffer particleBoardBuffer;
@@ -73,6 +75,7 @@ public class SlimeHandler : MonoBehaviour
         computeParticle.SetInt("n", n);
         computeParticle.SetInt("size", size);
         computeParticle.SetFloat("resolution", resolution);
+        computeParticle.SetFloat("noseStrength", noseStrength);
         computeParticle.SetInt("trailLength", lengthOfFoodTrail);
         computeParticle.SetInt("timeBeforeTurn", timeBeforeTurn);
 
@@ -81,6 +84,7 @@ public class SlimeHandler : MonoBehaviour
         computeTexture.SetFloat("resolution", resolution);
         computeTexture.SetFloat("n", n);
         computeTexture.SetBuffer(0, "particleArray", particleBoardBuffer);
+        computeTexture.SetInt("lengthOfFoodTrail", lengthOfFoodTrail);
 
 
     }

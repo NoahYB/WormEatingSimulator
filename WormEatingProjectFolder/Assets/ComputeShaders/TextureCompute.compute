@@ -8,7 +8,6 @@ RWTexture2D<float4> Result;
 float resolution;
 float n;
 float t = 1;
-
 RWStructuredBuffer<int> particleArray;
 
 
@@ -28,13 +27,13 @@ void CSMain (uint3 id : SV_DispatchThreadID)
         Result[id.xy] = float4(type, 0.0, 0.0, 0.0);
     else if (type >= 4) {
         particleArray[index] += 1;
-        Result[id.xy] = float4(100 / float(type/2), 100 / float(type * 2), 0, 0);
+        Result[id.xy] = float4(300 / float(type/2), 300 / float(type * 2), 0, 0);
     }
     else if (type == 2)
         Result[id.xy] = float4(0.0, 1.0, 0.0, 0.0);
-    else if (type <= -3) {
-        particleArray[index] -= 1;
-        Result[id.xy] = float4(max(.3,fmod((-1 * type),1000)/1000), 0, .2, 0.0);
+    else if (type <0) {
+        particleArray[index] += 1;
+        Result[id.xy] = float4(0, 0, 0, 0);
     }
     else
         Result[id.xy] = float4(0.0, 0.0, 0.0, 0.0);

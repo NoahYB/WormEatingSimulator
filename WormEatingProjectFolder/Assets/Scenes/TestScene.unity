@@ -155,14 +155,15 @@ MonoBehaviour:
   computeTexture: {fileID: 7200000, guid: 9414b5c7921ac8e459399ee46e4a9427, type: 3}
   computeParticle: {fileID: 7200000, guid: 2c3217bb542c8a2489493f94faf919d9, type: 3}
   renderTexture: {fileID: 0}
-  resolution: 1000
-  n: 500
-  speed: 2
+  resolution: 500
+  n: 10000
+  speed: 3
   size: 2
-  sizeOfFood: 6
-  numberOfFood: 120
+  sizeOfFood: 50
+  numberOfFood: 10
   lengthOfFoodTrail: 1000
-  timeBeforeTurn: 20
+  timeBeforeTurn: 5
+  noseStrength: 0.0008
 --- !u!81 &1052029986
 AudioListener:
   m_ObjectHideFlags: 0

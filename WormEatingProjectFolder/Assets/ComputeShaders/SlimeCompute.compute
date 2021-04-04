@@ -22,6 +22,7 @@ float resolution;
 int size;
 int trailLength;
 int timeBeforeTurn;
+float noseStrength;
 
 float rand(float2 co) {
     return frac(sin(dot(co.xy, float2(3.245968465, 78.233))) * 43758.5453);
@@ -55,9 +56,11 @@ void setPosition(int position, int value, int size) {
     }
 }
 void setTrailPosition(int position, int value, int size) {
-    value = particleArray[position] < 0 ? particleArray[position] : value;
+
+    //value = particleArray[position] < 0 ? particleArray[position] : value;
+
     particleArray[position] = value;
-    
+
     for (int i = 0; i < size; i++) {
         particleArray[position + resolution * i] = value;
         particleArray[position - resolution * i] = value;
@@ -91,6 +94,28 @@ bool smell(float2 pos) {
     }
     return false;
 }
+float followtrail(float2 pos, float heading) {
+    const float angle = 3.14159265358979 * 2 / 8;
+    float d = 0;
+    float2 ogPos = pos;
+    int largest = -1000000000;
+    float picked = heading;
+    for (int j = 0; j < 8; j++) {
+        float2 direction = normalize(float2(cos(d), sin(d)));
+        for (float i = 0; i < resolution* noseStrength; i += .01f) {
+            pos += direction * i;
+            if (particleArray[int(pos.x) + int(pos.y) * resolution] < 0 &&
+                particleArray[int(pos.x) + int(pos.y) * resolution] > largest) {
+                largest = particleArray[int(pos.x) + int(pos.y) * resolution];
+                picked = d;
+            }  
+        }
+        d += angle;
+        pos = ogPos;
+    }
+    return picked;
+}
+
 
 float probe(float2 pos, float heading, float length, float spreadAngle) {
     float2 ogPos = pos;
@@ -99,7 +124,7 @@ float probe(float2 pos, float heading, float length, float spreadAngle) {
     for (int j = 0; j < 3; j++) {
         
         float2 direction = normalize(float2(cos(heading), sin(heading)));
-        for (float i = 0; i < length; i += .1f) {
+        for (float i = 0; i < length; i += .01f) {
             pos += direction * i;
             senseIntegerPosition = int(pos.x) + int(pos.y) * resolution;
             if (particleArray[senseIntegerPosition] == 2 || particleArray[senseIntegerPosition] == 3) {
@@ -121,16 +146,16 @@ void updateTrailPositions(int l, int value, uint currentIndex, int size) {
 void makeFoodTrail(int l, int size) {
     int index = l * trailLength;
     for (int i = index; i < index + trailLength; i++) {
-        particleArray[trailPositions[i]] = -3;
+        particleArray[trailPositions[i]] -= 100;
         for (int p = 0; p < size; p++) {
-            particleArray[trailPositions[i] + resolution * p] = -3;
-            particleArray[trailPositions[i] - resolution * p] = -3;
+            particleArray[trailPositions[i] + resolution * p] -= 100;
+            particleArray[trailPositions[i] - resolution * p] -= 100;
             particleArray[trailPositions[i] + p] = -3;
             particleArray[trailPositions[i] - p] = -3;
-            particleArray[trailPositions[i] - resolution * p + p] = -3;
-            particleArray[trailPositions[i] - resolution * p - p] = -3;
-            particleArray[trailPositions[i] + resolution * p + p] = -3;
-            particleArray[trailPositions[i] + resolution * p - p] = -3;
+            particleArray[trailPositions[i] - resolution * p + p] -= 100;
+            particleArray[trailPositions[i] - resolution * p - p] -= 100;
+            particleArray[trailPositions[i] + resolution * p + p] -= 100;
+            particleArray[trailPositions[i] + resolution * p - p] -= 100;
         }
     }
 }
@@ -156,6 +181,7 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     //get position in texture
     int integerPosition = int(pos.x) + int(pos.y) * resolution;
     if (smell(pos)) {
+        particles[i].speed = 0;
         particles[i].foundFood = 1;
     }
     else {
@@ -166,7 +192,6 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     particles[i].currentIndex += 1;
     particles[i].currentIndex = particles[i].currentIndex % trailLength;
     if (particles[i].foundFood == 1) {
-        particles[i].speed = 0;
         setTrailPosition(integerPosition, 4, size);
         makeFoodTrail(i, size);
     }
@@ -190,11 +215,13 @@ void CSMain(uint3 id : SV_DispatchThreadID)
         headingModifier = 3.14159265358979 / 4 * -1.0 * headingModifier;
     else
         headingModifier = 3.14159265358979 / 4 * headingModifier;
-    particles[i].heading += headingModifier * when_eq(foodPosition,-1000) 
+
+    heading += headingModifier
         * when_eq(fmod(particles[i].changeheading, timeBeforeTurn),0);
 
-    heading = headingModifier > 0 ? foodPosition : heading;
-    
+    //heading = headingModifier > 0 ? foodPosition : heading;
+    heading = followtrail(pos,heading);
+    particles[i].heading = heading;
     //update position time and heading of particle
     particles[i].position = pos;
     particles[i].t = max(0, t - .000002);
