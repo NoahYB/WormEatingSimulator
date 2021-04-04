@@ -1,0 +1,568 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: preprocessCompute
+  insize=1199 outsize=1198 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1198 outsize=1572 ok=1
+Cmd: preprocessCompute
+  insize=1225 outsize=1224 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1224 outsize=1805 ok=1
+Cmd: preprocessCompute
+  insize=1226 outsize=1225 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(37): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1225 outsize=1833 ok=1
+Cmd: preprocessCompute
+  insize=1227 outsize=1226 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(37): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1226 outsize=1833 ok=1
+Cmd: preprocessCompute
+  insize=1199 outsize=1198 ok=1
+Cmd: preprocessCompute
+  insize=1199 outsize=1198 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1198 outsize=1572 ok=1
+Cmd: preprocessCompute
+  insize=1199 outsize=1198 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1198 outsize=1576 ok=1
+Cmd: preprocessCompute
+  insize=1355 outsize=1354 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1354 outsize=29 ok=1
+Cmd: disassembleShader
+  api=4 insize=7876 outsize=10990 ok=1
+Cmd: preprocessCompute
+  insize=1364 outsize=1363 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1363 outsize=2032 ok=1
+Cmd: preprocessCompute
+  insize=1366 outsize=1365 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1365 outsize=2032 ok=1
+Cmd: preprocessCompute
+  insize=1375 outsize=1374 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(31): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1374 outsize=2032 ok=1
+Cmd: preprocessCompute
+  insize=1191 outsize=1190 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1190 outsize=1604 ok=1
+Cmd: preprocessCompute
+  insize=1190 outsize=1189 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1189 outsize=1644 ok=1
+Cmd: preprocessCompute
+  insize=1192 outsize=1191 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1191 outsize=1644 ok=1
+Cmd: preprocessCompute
+  insize=1166 outsize=1165 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1165 outsize=1604 ok=1
+Cmd: preprocessCompute
+  insize=1166 outsize=1165 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1165 outsize=1604 ok=1
+Cmd: preprocessCompute
+  insize=1165 outsize=1164 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1164 outsize=1604 ok=1
+Cmd: preprocessCompute
+  insize=7037 outsize=7036 ok=1
+Cmd: preprocessCompute
+  insize=1166 outsize=1165 ok=1
+Cmd: preprocessCompute
+  insize=7038 outsize=7037 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(195): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(195): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(198): implicit truncation of vector type
+  api=4 insize=7037 outsize=8234 ok=1
+Cmd: preprocessCompute
+  insize=7115 outsize=7114 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(183): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(196): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(196): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  api=4 insize=7114 outsize=8342 ok=1
+Cmd: preprocessCompute
+  insize=7113 outsize=7112 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(183): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(196): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(196): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  api=4 insize=7112 outsize=8342 ok=1
+Cmd: preprocessCompute
+  insize=1169 outsize=1168 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1168 outsize=1632 ok=1
+Cmd: preprocessCompute
+  insize=7037 outsize=7036 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(182): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(195): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(195): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(198): implicit truncation of vector type
+  api=4 insize=7036 outsize=8234 ok=1
+Cmd: preprocessCompute
+  insize=7521 outsize=7520 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(198): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(211): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(211): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 2 plat 4 at SlimeCompute.compute(215): 'followtrail': no matching 1 parameter function
+  api=4 insize=7520 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=7529 outsize=7528 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(198): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(211): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(211): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  api=4 insize=7528 outsize=8766 ok=1
+Cmd: preprocessCompute
+  insize=7597 outsize=7596 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7596 outsize=8738 ok=1
+Cmd: preprocessCompute
+  insize=7597 outsize=7596 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7596 outsize=8738 ok=1
+Cmd: preprocessCompute
+  insize=7601 outsize=7600 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7600 outsize=8778 ok=1
+Cmd: preprocessCompute
+  insize=7601 outsize=7600 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(199): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(212): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7600 outsize=8778 ok=1
+Cmd: preprocessCompute
+  insize=7682 outsize=7681 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7681 outsize=9006 ok=1
+Cmd: preprocessCompute
+  insize=7678 outsize=7677 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7677 outsize=8978 ok=1
+Cmd: preprocessCompute
+  insize=7675 outsize=7674 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7674 outsize=8970 ok=1
+Cmd: preprocessCompute
+  insize=7677 outsize=7676 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7676 outsize=8970 ok=1
+Cmd: preprocessCompute
+  insize=7676 outsize=7675 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7675 outsize=8970 ok=1
+Cmd: preprocessCompute
+  insize=7677 outsize=7676 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7676 outsize=8970 ok=1
+Cmd: preprocessCompute
+  insize=7678 outsize=7677 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7677 outsize=8970 ok=1
+Cmd: preprocessCompute
+  insize=7674 outsize=7673 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7673 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7675 outsize=7674 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7674 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7675 outsize=7674 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7674 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7679 outsize=7678 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7678 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7678 outsize=7677 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7677 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7679 outsize=7678 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7678 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7680 outsize=7679 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7679 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7679 outsize=7678 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7678 outsize=8930 ok=1
+Cmd: preprocessCompute
+  insize=7688 outsize=7687 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7687 outsize=8946 ok=1
+Cmd: preprocessCompute
+  insize=7630 outsize=7629 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7629 outsize=8974 ok=1
+Cmd: preprocessCompute
+  insize=7629 outsize=7628 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7628 outsize=8974 ok=1
+Cmd: preprocessCompute
+  insize=7631 outsize=7630 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7630 outsize=8234 ok=1
+Cmd: preprocessCompute
+  insize=7641 outsize=7640 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(200): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7640 outsize=9354 ok=1
+Cmd: preprocessCompute
+  insize=7643 outsize=7642 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(200): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(216): implicit truncation of vector type
+  api=4 insize=7642 outsize=8418 ok=1
+Cmd: preprocessCompute
+  insize=7643 outsize=7642 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(200): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): implicit truncation of vector type
+  api=4 insize=7642 outsize=9042 ok=1
+Cmd: preprocessCompute
+  insize=7676 outsize=7675 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): 'when_eq': implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7675 outsize=9074 ok=1
+Cmd: preprocessCompute
+  insize=7677 outsize=7676 ok=1
+Cmd: preprocessCompute
+  insize=7583 outsize=7582 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7582 outsize=8954 ok=1
+Cmd: preprocessCompute
+  insize=7585 outsize=7584 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7584 outsize=8922 ok=1
+Cmd: preprocessCompute
+  insize=1096 outsize=1095 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(35): comma expression used where a vector constructor may have been intended
+  api=4 insize=1095 outsize=1192 ok=1
+Cmd: preprocessCompute
+  insize=7644 outsize=7643 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7643 outsize=8978 ok=1
+Cmd: preprocessCompute
+  insize=7628 outsize=7627 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(202): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  api=4 insize=7627 outsize=8978 ok=1
+Cmd: preprocessCompute
+  insize=7621 outsize=7620 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(202): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(215): implicit truncation of vector type
+  api=4 insize=7620 outsize=8938 ok=1
+Cmd: preprocessCompute
+  insize=7600 outsize=7599 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7599 outsize=8938 ok=1
+Cmd: preprocessCompute
+  insize=7646 outsize=7645 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(201): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(214): implicit truncation of vector type
+  api=4 insize=7645 outsize=8954 ok=1
+Cmd: preprocessCompute
+  insize=7613 outsize=7612 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(200): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(213): implicit truncation of vector type
+  api=4 insize=7612 outsize=8922 ok=1
+Cmd: preprocessCompute
+  insize=1132 outsize=1131 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): comma expression used where a vector constructor may have been intended
+  api=4 insize=1131 outsize=1300 ok=1
+Cmd: preprocessCompute
+  insize=7827 outsize=7826 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(204): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(217): implicit truncation of vector type
+  api=4 insize=7826 outsize=8854 ok=1
+Cmd: preprocessCompute
+  insize=7855 outsize=7854 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7854 outsize=8894 ok=1
+Cmd: preprocessCompute
+  insize=1131 outsize=1130 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): comma expression used where a vector constructor may have been intended
+  api=4 insize=1130 outsize=1300 ok=1
+Cmd: preprocessCompute
+  insize=1131 outsize=1130 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): comma expression used where a vector constructor may have been intended
+  api=4 insize=1130 outsize=1300 ok=1
+Cmd: preprocessCompute
+  insize=1132 outsize=1131 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  error: 1 plat 4 at TextureCompute.compute(36): comma expression used where a vector constructor may have been intended
+  api=4 insize=1131 outsize=1300 ok=1
+Cmd: preprocessCompute
+  insize=7853 outsize=7852 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(221): implicit truncation of vector type
+  api=4 insize=7852 outsize=9174 ok=1
+Cmd: preprocessCompute
+  insize=1139 outsize=1138 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1138 outsize=1376 ok=1
+Cmd: preprocessCompute
+  insize=7855 outsize=7854 ok=1
+Cmd: preprocessCompute
+  insize=7915 outsize=7914 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7914 outsize=8950 ok=1
+Cmd: preprocessCompute
+  insize=7855 outsize=7854 ok=1
+Cmd: preprocessCompute
+  insize=7884 outsize=7883 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at SlimeCompute.compute(101): decimal value truncated to 64 bits
+  error: 2 plat 4 at SlimeCompute.compute(101): syntax error: unexpected token ';'
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7883 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=7874 outsize=7873 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at SlimeCompute.compute(101): syntax error: unexpected token ';'
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7873 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=7865 outsize=7864 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7864 outsize=8894 ok=1
+Cmd: preprocessCompute
+  insize=7864 outsize=7863 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(205): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(218): implicit truncation of vector type
+  api=4 insize=7863 outsize=8894 ok=1
+Cmd: preprocessCompute
+  insize=7865 outsize=7864 ok=1
+Cmd: preprocessCompute
+  insize=7898 outsize=7897 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(206): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(219): implicit truncation of vector type
+  api=4 insize=7897 outsize=8926 ok=1
+Cmd: preprocessCompute
+  insize=7898 outsize=7897 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(206): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(219): implicit truncation of vector type
+  api=4 insize=7897 outsize=9430 ok=1
+Cmd: preprocessCompute
+  insize=1136 outsize=1135 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1135 outsize=1376 ok=1
+Cmd: preprocessCompute
+  insize=7900 outsize=7899 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(206): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(219): implicit truncation of vector type
+  api=4 insize=7899 outsize=9398 ok=1
+Cmd: preprocessCompute
+  insize=7898 outsize=7897 ok=1
+Cmd: preprocessCompute
+  insize=7912 outsize=7911 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(206): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(219): implicit truncation of vector type
+  api=4 insize=7911 outsize=9430 ok=1
+Cmd: preprocessCompute
+  insize=1135 outsize=1134 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at TextureCompute.compute(30): integer divides may be much slower, try using uints if possible.
+  api=4 insize=1134 outsize=1300 ok=1
+Cmd: preprocessCompute
+  insize=7914 outsize=7913 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at SlimeCompute.compute(206): implicit truncation of vector type
+  error: 1 plat 4 at SlimeCompute.compute(219): implicit truncation of vector type
+  api=4 insize=7913 outsize=9214 ok=1
